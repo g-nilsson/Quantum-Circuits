@@ -32,7 +32,7 @@
   window.addEventListener("load", function() {
     var iframe = document.querySelector("iframe");
     if (iframe) {
-      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      var iframeDocument = iframe.contentDocument; /* || iframe.contentWindow.document;*/
       iframeDocument.body.style.zoom = "80%"; // Adjust the zoom percentage as needed
     }
   });
