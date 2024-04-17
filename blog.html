@@ -4,6 +4,17 @@
   margin: auto;
   text-align: center;
 }
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Adjust this value according to your iframe aspect ratio */
+}
+.iframe-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none; /* Optional: Remove iframe border */
 body {
     font-family: Helvetica, Arial, sans-serif;
   }
@@ -19,9 +30,9 @@ body {
   <h5>Title description, Dec 7, 2017</h5>
   <div class="fakeimg" style="height:200px;">Image</div>
   <p>Some text.....</p>
-
-<iframe src="https://designer.thequantumlaend.de/" width="800" height="600"></iframe>
-
+<div class="iframe-container">
+   <iframe src="https://designer.thequantumlaend.de/"></iframe>
+</div>
 	
 </div>
 
