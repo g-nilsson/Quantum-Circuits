@@ -5,16 +5,15 @@
   text-align: center;
 }
 .iframe-container {
-    position: relative;
-    width: 60%;
-    height: 0;
-    padding-bottom: 56.25%; /* Adjust this value according to your iframe aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this value according to your layout */
 }
 .iframe-container iframe {
-    position: absolute;
     max-width: 100%;
     max-height: 100%;
-    border: none; /* Optional: Remove iframe border */
+}
 body {
     font-family: Helvetica, Arial, sans-serif;
   }
