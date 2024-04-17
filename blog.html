@@ -32,8 +32,12 @@
   window.addEventListener("load", function() {
     var iframe = document.querySelector("iframe");
     if (iframe) {
-      var iframeDocument = iframe.contentDocument; /* || iframe.contentWindow.document;*/
-      iframeDocument.body.style.zoom = "80%"; // Adjust the zoom percentage as needed
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      if (iframeDocument) {
+        var iframeContent = iframeDocument.documentElement.innerHTML;
+        // Modify the HTML content of the iframeDocument as needed
+        iframeDocument.body.innerHTML = "<h1>New Content</h1><p>This is the new content of the iframe.</p>";
+      }
     }
   });
 </script>
@@ -41,7 +45,7 @@
 <body>
 
 <div class="blog-post">
-  <h1>This is the Title of My Blog Postx</h1>
+  <h1>This is the Title of My Blog Posty</h1>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, urna vel consectetur eleifend, urna ex tincidunt justo, vel scelerisque justo nisl nec mi.</p>
   
   <div class="iframe-container">
