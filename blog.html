@@ -28,6 +28,15 @@
     max-height: 100%; /* Adjust iframe height as needed */
   }
 </style>
+<script>
+  window.addEventListener("load", function() {
+    var iframe = document.querySelector("iframe");
+    if (iframe) {
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      iframeDocument.body.style.zoom = "80%"; // Adjust the zoom percentage as needed
+    }
+  });
+</script>
 </head>
 <body>
 
