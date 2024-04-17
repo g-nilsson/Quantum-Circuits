@@ -20,6 +20,14 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px; /* Adjust spacing between text and iframe */
+    
+    -ms-zoom: 0.75;
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.75);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.75);
+    -webkit-transform-origin: 0 0;
   }
   .iframe-container iframe {
     max-width: 100%;
@@ -28,19 +36,6 @@
     max-height: 100%; /* Adjust iframe height as needed */
   }
 </style>
-<script>
-  window.addEventListener("load", function() {
-    var iframe = document.querySelector("iframe");
-    if (iframe) {
-      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-      if (iframeDocument) {
-        var iframeContent = iframeDocument.documentElement.innerHTML;
-        // Modify the HTML content of the iframeDocument as needed
-        iframeDocument.body.innerHTML = "<h1>New Content</h1><p>This is the new content of the iframe.</p>";
-      }
-    }
-  });
-</script>
 </head>
 <body>
 
