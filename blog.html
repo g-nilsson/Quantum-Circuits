@@ -1,41 +1,44 @@
-<style>	
-.content {
-  max-width: 1500px;
-  margin: auto;
-  text-align: center;
-}
-.iframe-container {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Post</title>
+<style>
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .blog-post {
+    width: 80%; /* Adjust as needed */
+    margin: 0 auto; /* Center the blog post */
+  }
+  .iframe-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust this value according to your layout */
-    padding-left: 10%;
-}
-.iframe-container iframe {
+    margin-top: 20px; /* Adjust spacing between text and iframe */
+  }
+  .iframe-container iframe {
     max-width: 100%;
-    max-height: 100%;
-}
-body {
-    font-family: Helvetica, Arial, sans-serif;
+    max-height: 400px; /* Adjust iframe height as needed */
   }
 </style>
+</head>
 <body>
 
-<div class="content">
-  <div class="centered-text">
-  <h2>Quantum Circuits</h2>
+<div class="blog-post">
+  <h1>This is the Title of My Blog Post</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo, urna vel consectetur eleifend, urna ex tincidunt justo, vel scelerisque justo nisl nec mi.</p>
+  
+  <div class="iframe-container">
+    <iframe src="https://designer.thequantumlaend.de/"></iframe>
   </div>
-
-  <h2>TITLE HEADING</h2>
-  <h5>Title description, Dec 7, 2017</h5>
-  <div class="fakeimg" style="height:200px;">Image</div>
-  <p>Some text.....</p>
+  
+  <p>Donec feugiat pharetra lectus, eget efficitur quam suscipit at. Morbi malesuada tellus at ligula interdum, sed ultricies libero finibus. Integer quis risus a mi vehicula gravida.</p>
 </div>
-
-
-<div class="iframe-container">
-   <iframe src="https://designer.thequantumlaend.de/"></iframe>
-</div>
-	
 
 </body>
+</html>
