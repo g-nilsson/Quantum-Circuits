@@ -3,21 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
       }
       .blog-post {
-        width: 80%; /* Adjust as needed */
+        width: 50%; /* Adjust as needed */
         margin: 0 auto; /* Center the blog post */
       }
       .iframe-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 20px; /* Adjust spacing between text and iframe */
+        margin: 40px 0px; /* Adjust spacing between text and iframe */
       }
       .iframe-container iframe {
         max-width: 100%;
@@ -27,15 +33,60 @@
       }
       .center {
         display: block;
+        margin: 40px;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
+        /* border: solid black 1px; */
+      }
+      /* Styling for h1 title */
+      h1 {
+        font-size: 2.5em;
+        /* color: #333; */
+        color: #ffcc01;
+        margin: 80px 0px;
+        text-align: center;
+      }
+
+      /* Styling for h2 headings */
+      h2 {
+        font-size: 1.8em;
+        color: #444;
+        margin: 30px 0px;
+      }
+
+      /* Styling for paragraphs */
+      p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      /* Styling for links */
+      a {
+        color: #007bff; /* Change link color as per your preference */
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 8px; /* Optional: adds rounded corners to images */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
   <body>
     <div class="blog-post">
-      <h1>What are Quantum Circuits?</h1>
+      <h1>Quantum Circuits: A Primer</h1>
+      <h2>What are Quantum Circuits?</h2>
       <p>
         A quantum circuit is a network of wires, where we imagine qubits
         traveling around and going through different quantum gates. To
@@ -49,7 +100,7 @@
       </p>
       <img
         src="Assets/probability_tree.gif"
-        style="float: right; width: 350px"
+        style="float: right; width: 350px; margin: 40px"
       />
       <p>
         For example, if you have a biased coin colored blue and red, landing on
@@ -148,9 +199,6 @@
         values before we do |x|^2) of 0 and 1, respectively, get inputted into
         the second Hadamard gate. If I plug in a qubit that is 100% at 0, what
         kind of qubit will I get at the very end?
-        <br />
-        <br />
-        <br />
       </p>
       <img
         src="Assets/hadamard_gates_series.png"
@@ -194,11 +242,18 @@
         Remove all but 1 of the qubits, then set the system up like the pictures
         below and observe how the histogram on the bottom changes.
       </p>
-      <img src="Assets/step1.png" />
-      <br />
-      <img src="Assets/step2.png" />
-      <br />
-      <img src="Assets/step3.png" />
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          flex: 1;
+          justify-content: space-between;
+        "
+      >
+        <img src="Assets/step1.png" />
+        <img src="Assets/step2.png" />
+        <img src="Assets/step3.png" />
+      </div>
 
       <div class="iframe-container">
         <iframe src="https://designer.thequantumlaend.de/"></iframe>
@@ -206,10 +261,10 @@
 
       <h2>Benefits (over classical models)</h2>
       <p>
-        The question now is, what benefits do these quantum algorithms and
-        quantum circuit models provide? More specifically, why is there so much
-        hype for the use and achievability of quantum circuit models? What’s
-        wrong with our classical models of computation?
+        The question now is, what benefits do these quantum circuit models
+        provide? More specifically, why is there so much hype for the use and
+        achievability of quantum circuit models? What’s wrong with our classical
+        models of computation?
       </p>
       <p>
         In terms of computability, there is actually no difference between the
@@ -225,20 +280,19 @@
         (known generally as NP problems) require so much time to complete that
         they do not make sense to even attempt!
       </p>
-      <p>For instance, let us consider…</p>
       <p>
-        This is where quantum computing models come into play. These models use
-        the principles of quantum mechanics to solve these complicated problems
-        with exponentially fewer computational steps than the best-known
-        non-quantum algorithms, providing the potential for exponential time
-        complexity improvements over classical models! This capability, known as
-        “quantum supremacy” is a result of the principles of quantum
-        superposition and entanglement, which would, in theory, allow quantum
-        computers to explore multiple computational paths simultaneously, a
-        property that classical computational models have not been able to
-        exhibit. This opens up the potential for tackling computationally
-        intensive tasks that were previously infeasible within reasonable time
-        frames.
+        This is where quantum circuit models can come into play. These models
+        use the principles of quantum mechanics to solve these complicated
+        problems with exponentially fewer computational steps than the
+        best-known non-quantum algorithms, providing the potential for
+        exponential time complexity improvements over classical models! This
+        capability, known as “quantum supremacy” is a result of the principles
+        of quantum superposition and entanglement, which would, in theory, allow
+        quantum computers to explore multiple computational paths
+        simultaneously, a property that classical computational models have not
+        been able to exhibit. This opens up the potential for tackling
+        computationally intensive tasks that were previously infeasible within
+        reasonable time frames.
       </p>
 
       <h2>Examples</h2>
