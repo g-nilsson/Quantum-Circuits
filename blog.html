@@ -40,16 +40,15 @@
   <p>A quantum circuit is a network of wires, where we imagine qubits traveling around and going through different quantum gates.
       To understand what this actually looks like, it will be much easier to first understand probabilistic circuits</p>
   <h2>Probabilistic Circuits</h2>
-  <p>If you've ever drawn a <italic>probability</italic> tree, you've also drawn a probabilistic circuit!</p>
+  <p>If you've ever drawn a <i>probability</i> tree, you've also drawn a probabilistic circuit!</p>
   <img src='Assets/probability_tree.gif' style="float:right;width:350px;">
-  <p>For example, if you have a biased coin colored blue and red, which lands with the blue side up 60% of the time, 
-    and the red side up 40% of the time. We can describe the process of flipping this coin twice using the probability tree to the right.<br></p>
-    <p>Follow the probability mass as it progresses through the tree (highlighted in green), 
-    and notice that we're multiplying the green probability mass with the weight of the edge 
-    to see how much probability mass will be at the next node (this concept is useful to understand quantum circuits later). <br></p>
-    <p>The probability tree to the right represents two consecutive coin tosses, and let's say we're going to consider 
-    it a "win" if we flip different colors in our consecutive tosses. We can then get the overall probability of success 
-      by adding up all the final probability masses that correspond to different colors being flipped, so in this case 0.24+0.24 = 0.48, not too bad odds!<br></p>
+  <p>For example, if you have a biased coin colored blue and red, landing on blue 60% of the time, 
+    and red 40% of the time. We can describe the process of flipping this coin twice using the probability tree to the right.<br></p>
+    <p>We can see how the probability mass progresses through the tree (highlighted in green), 
+    by multiplying probability mass with the weight of each edge it passes over. <br></p>
+    <p>Let's say we're going to consider 
+    it a "win" if we flip different colors in our consecutive tosses. We can then get the overall probability of "winning" 
+      by adding up all the final probability masses that correspond to our win scenario, so in this case 0.24+0.24 = 0.48, not too bad odds!<br></p>
   <p>Now, the example above describes two coin flips and the potential outcomes, but the true power of probabilistic circuits comes 
   when we can employ them for different algorithms. In that case, we have some input on the left-hand side and a probability associated with each possible outcome. 
     Yes, this means that a probabilistic algorithm isn't guaranteed to give the right answer. That might feel weird, but actually, most generative AI that we're used to today
