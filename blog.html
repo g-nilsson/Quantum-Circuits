@@ -117,36 +117,32 @@
         Let's say we're going to consider it a "win" if we flip different colors
         in our consecutive tosses. We can then get the overall probability of
         "winning" by adding up all the final probability masses that correspond
-        to our win scenario, so in this case 0.24+0.24 = 0.48, not too bad
-        odds!<br />
+        to our win scenario, so in this case 0.24+0.24 = 0.48.<br />
       </p>
       <p>
-        We can use probabilistic circuits to describe probabilistic algorithms.
-        A concept that might feel weird at first, why would we want an algorithm
-        that isn't always correct? But consider the generative AI that we're
-        used to today, they're examples of probabilistic models!<br />
+        Let me show you a circuit that models a coin flip!<br />
       </p>
 
       <img src="Assets/prob_hadamard.gif" width="350px" class="center" />
       <p>
-        In the gif above, we see a setup that takes in two inputs and throws out
-        two outputs. We could call it a gate, much like how logic gates take in
-        inputs on a circuit. As you might see, this specific gate gives out 50%
-        to the top and 50% to the bottom, no matter what the input is. This
-        specific gate actually has a name: the Hadamard Gate!
+        In the gif above, we see a setup that has two inputs and
+        two outputs, much like how logic gates take in inputs and outputs on circuits
+        As you might see, this specific gate gives out 50%
+        to the top and 50% to the bottom, regardless of the input. This
+        coin-flipping gate actually has a name: the Hadamard Gate!
         <br />
         Now, I want you to imagine placing two of these in a row so that the
-        outputs of the first one map into the input of the next. Stop for a
-        second and consider what the output of the second one should be...
+        outputs of the first one map into the input of the next. Stop 
+        and consider what the output of the second gate should be...
         <br />
         <br />
       </p>
       <p>
-        After a little thinking, it feels natural that the output of the second
-        Hadamard gate will also be 50/50, after all, every Hadamard gate outputs
+        After some thinking, it feels natural that the output of the second
+        Hadamard gate will also be 50/50, since every Hadamard gate outputs
         50/50, regardless of input. We could also come to the same conclusion by
         following the possible paths, and adding up the probabilities of each
-        path
+        path:
       </p>
 
       <img src="Assets/two_hadamard_prob.png" width="800px" class="center" />
@@ -166,26 +162,24 @@
       </p>
       <img src="Assets/quantum_hadamard.gif" width="800px" class="center" />
       <p>
-        Okay, so far, not too much has changed. We're still letting our green
+        So far, not much has changed. We're still letting our
         probability values traverse the network, multiplying with the weight of
-        each edge as we go. Actually, we should call our green values
+        each edge as we go. Actually, we should call our probability values
         "probability amplitudes" now, because they can be complex or even
         negative, and they don't need to add up to 1 anymore. This doesn't make
-        sense for normal probabilities, and it's because they aren't, they are
-        probability amplitudes. In the very end, we do a special operation |x|^2
-        on our probability amplitudes to get rid of nasty negatives or complex
-        values, this value is our unnormalized probability because they won't
-        necessarily add up to 1. In the example above, we see that the final
-        unnormalized probabilities are equal to each other, which is the same
-        result we got in our Hadamard gate before, a 50/50 outcome if we started
+        sense for normal probabilities. In the very end, we do a special operation |x|^2
+        on our probability amplitudes to get rid of negatives and complex
+        values, the result is our unnormalized probability. In the example above, 
+        we see that the final unnormalized probabilities are equal to each other, 
+        which is the same result we got in our Hadamard gate before, a 50/50 outcome if we started
         at the top input!<br />
       </p>
       <p>
-        Now, I said the "top" input, but notice that I've labeled the top input
+        Also, notice that I've labeled the top input
         with a 0 and the bottom one with a 1, we can now treat them as bits of
         input where we either input a 1 or a 0. In the probabilistic world, we
-        start at a single point, with the entire probability mass, and then the
-        probability mass spreads out to the different possible outcomes. <br />
+        start at a single point, with the entire probability mass, letting it
+        spread out to the different possible outcomes. <br />
         In the quantum world, we input a qubit and get out a qubit! In the gif
         above, it looks like we have two different inputs and two different
         outputs, but really we're inputting a single qubit (that happens to have
@@ -194,11 +188,11 @@
         and a 50% chance to collapse to a 1, if we observe it). We've put our
         single qubit into a <b>superposition</b>!<br />
         <br />
-        Now I'm going to ask you a question; I will connect two of these quantum
+        Now let's think, if I connect two of these quantum
         Hadamard gates in series such that the probability amplitudes (the
         values before we do |x|^2) of 0 and 1, respectively, get inputted into
-        the second Hadamard gate. If I plug in a qubit that is 100% at 0, what
-        kind of qubit will I get at the very end?
+        the second Hadamard gate. If I plug in a qubit that is 100% at 0, what 
+        qubit will I get at the very end?
       </p>
       <img
         src="Assets/hadamard_gates_series.png"
