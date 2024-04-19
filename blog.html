@@ -77,13 +77,26 @@
   A quantum circuit, is just like a probabilistic circuit, except that the edge weights may be complex numbers. Okay, now what does that mean?<br>
   Let's remake the Hadamard Gate but in the quantum world. 
 </p>
-  <img src='Assets/quantum_hadamard.gif' width=500px class="center">
-  Okay, so far, not too much has changed. We're still letting our green probability values traverse the network, multiplying with the weight of each edge as we go. 
+  <img src='Assets/quantum_hadamard.gif' width=800px class="center">
+  <p>Okay, so far, not too much has changed. We're still letting our green probability values traverse the network, multiplying with the weight of each edge as we go. 
   Actually, we should call our green values "probability amplitudes" now, because they can be complex or even negative, and they don't need to add up to 1 anymore. 
   This doesn't make sense for normal probabilities, and it's because they aren't, they are probability amplitudes.
   In the very end, we do a special operation |x|^2 on our probability amplitudes to get rid of nasty negatives or complex values, this value is our unnormalized probability because they won't necessarily  
   add up to 1. In the example above, we see that the final unnormalized probabilities are equal to each other, which is the same result we got in our Hadamard gate before, 
-  a 50/50 outcome if we started at the top input!
+  a 50/50 outcome if we started at the top input!<br>
+  </p>
+  <p>
+    Now, I said the "top" input, but notice that I've labeled the top input with a 0 and the bottom one with a 1, we can now treat them as bits of input where we either input a 1 or a 0.
+    In the probabilistic world, we start at a single point, with the entire probability mass, and then the probability mass spreads out to the different possible outcomes. <br>
+    In the quantum world, we input a qubit and get out a qubit! In the gif above, it looks like we have two different inputs and two different outputs, but really we're inputting a single qubit (that happens to have a 100% probability to collapse to a 0 if we were to observe it), and outputting a single qubit (that now has a 50% chance to collapse to a 0, and a 50% chance to collapse to a 1, if we observe it).
+    We've put our single qubit into a <b>superposition</b>!<br>
+    <br>
+    Now I'm going to ask you a question; I will connect two of these quantum Hadamard gates in series such that the probability amplitudes (the values before we do |x|^2) of 0 and 1, respectively, get inputted into the second Hadamard gate.
+    If I plug in a qubit that is 100% at 0, what kind of qubit will I get at the very end?
+    <br>
+    <br>
+    <br>
+  </p>
   
   <div class="iframe-container">
     <iframe src="https://designer.thequantumlaend.de/"></iframe>
