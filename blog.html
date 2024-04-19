@@ -66,13 +66,17 @@
   <p>After a little thinking, it feels natural that the output of the second Hadamard gate will also be 50/50, after all, every Hadamard gate outputs 50/50, regardless of input. 
     We could also come to the same conclusion by following the possible paths, and adding up the probabilities of each path</p>
 
-  <img src='Assets/two_hadamard_prob.png' width=600px class="center">
+  <img src='Assets/two_hadamard_prob.png' width=800px class="center">
   
 
   <p>The picture above shows that if you start at the top input, you have a 50% chance to end up at the top output, which makes sense!<br>
   Now, we're ready to see how all of this will work when we use quantum circuits instead, things are about to get weird.</p>
 
 <h2>Quantum Circuits</h2>
+<p>
+  A quantum circuit, is just like a probabilistic circuit, except that the edge weights may be complex numbers. Okay, now what does that mean?<br>
+  Let's remake the Hadamard Gate, but in the quantum world. 
+</p>
   
   <div class="iframe-container">
     <iframe src="https://designer.thequantumlaend.de/"></iframe>
