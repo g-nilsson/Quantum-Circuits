@@ -123,7 +123,8 @@
         Let's say we're going to consider it a "win" if we flip different colors
         in our consecutive tosses. We can then get the overall probability of
         "winning" by adding up all the final probability masses that correspond
-        to our win scenario, so in this case \(0.24+0.24 = 0.48\), not too bad odds!<br />
+        to our win scenario, so in this case \(0.24+0.24 = 0.48\), not too bad
+        odds!<br />
       </p>
       <p>Let me show you a circuit that models a coin flip!<br /></p>
 
@@ -166,8 +167,8 @@
         edge weights may be complex numbers. Okay, now what does that mean?<br />
       </p>
       <p>
-        Let's remake the Hadamard Gate but in the quantum world 
-        (Notice the complex weights of the top and bottom edges).
+        Let's remake the Hadamard Gate but in the quantum world (Notice the
+        complex weights of the top and bottom edges).
       </p>
       <img src="Assets/quantum_hadamard.gif" width="800px" class="center" />
       <p>
@@ -270,9 +271,9 @@
       <h2>Benefits (over classical models)</h2>
       <p>
         The question now is, what benefits do these quantum circuit models
-        provide? More specifically, why is there so much hype for the use and
-        achievability of quantum circuit models? What’s wrong with our classical
-        models of computation?
+        provide? Why is there so much hype for the use and achievability of
+        quantum circuit models? What’s wrong with our classical models of
+        computation?
       </p>
       <p>
         In terms of computability, there is actually no difference between the
@@ -283,24 +284,20 @@
       <p>
         The key phrase, however, is “given enough time.” Many computational
         problems that exist in the world today, even though they are
-        theoretically solvable by our classical models of computation, are very
-        complicated, making them practically impossible to solve. These problems
-        (known generally as \(NP\) problems) require so much time to complete
-        that they do not make sense to even attempt!
+        theoretically solvable by our classical models of computation, are
+        practically impossible to solve, because they require so much time to
+        complete that they do not make sense to even attempt!
       </p>
       <p>
         This is where quantum circuit models can come into play. These models
-        use the principles of quantum mechanics to solve these complicated
-        problems with exponentially fewer computational steps than the
-        best-known non-quantum algorithms, providing the potential for
-        exponential time complexity improvements over classical models! This
-        capability, known as <b>quantum supremacy</b> is a result of the
-        principles of quantum superposition and entanglement, which would, in
-        theory, allow quantum computers to explore multiple computational paths
-        simultaneously, a property that classical computational models have not
-        been able to exhibit. This opens up the potential for tackling
-        computationally intensive tasks that were previously infeasible within
-        reasonable time frames.
+        have the potential to solve such complicated problems with exponentially
+        fewer computational steps than the best-known non-quantum algorithms!
+        This capability, known as
+        <b>quantum supremacy</b>, is a result of the principles of quantum
+        superposition and entanglement, which would, in theory, allow quantum
+        computers to explore multiple computational paths simultaneously, a
+        property that classical computational models have not been able to
+        exhibit.
       </p>
 
       <h2>Examples</h2>
@@ -308,30 +305,31 @@
         While the concept of quantum supremacy is still under question, there
         has been some progress in quantum algorithms that provide some
         significant time benefits over classical models. One common algorithm is
-        <b>Shor’s algorithm</b>, which is used for integer factorization. The
-        best-known classical algorithm for solving this problem requires
-        super-polynomial time. However, with the quantum benefits of Shor’s
-        algorithm, this can be completed in polynomial time, representing a
-        significant time reduction from classical algorithms.
+        <b>Shor’s algorithm</b>. The best-known classical algorithm for integer
+        factorization requires super-polynomial time. However, with the quantum
+        benefits of Shor’s algorithm, this can be completed in polynomial time,
+        representing a significant time reduction from classical algorithms.
       </p>
       <p>
-        Another example of this is <b>Grover’s algorithm</b>, for finding marked
-        elements in an unstructured database. For a database with N elements, a
-        linear search would normally take \(O(N)\) time (an order of \(N\)
-        evaluations, for each element in the database) to find marked elements.
-        Grover’s algorithm requires just \(O(\sqrt{N})\) time, providing a
-        quadratic speedup for the problem, especially for larger database sizes.
+        Another example is <b>Grover’s algorithm</b>, for finding marked
+        elements in an unstructured database. For a database with \(N\)
+        elements, a linear search would normally take \(O(N)\) time. Grover’s
+        algorithm requires just \(O(\sqrt{N})\) time, providing a quadratic
+        speedup for the problem, especially for larger database sizes.
+        <br />
+        An example implementation of the algorithm is shown below, using just
+        two qubits to search through four possible states in .
       </p>
+      <img src="Assets/grover.png" width="800px" class="center" />
       <p>
-        These quantum algorithms, as well as the overall current level of
-        progress made in quantum computing research, show the compelling
-        potential to revolutionize the field of computational theory.
+        These quantum algorithms show the compelling potential to revolutionize
+        the field of computational theory.
       </p>
 
       <h2>P = NP?</h2>
       <p>
-        The discussion of time complexities brings us to the ongoing \(P = NP\)
-        debate. The debate questions whether the set of \(P\) problems -
+        How are these quantum circuit models relevant to the ongoing \(P = NP\)
+        debate? The debate questions whether the set of \(P\) problems -
         problems that can be solved in polynomial time; relatively quickly - is
         equal to the set of \(NP\) problems - problems that can be verified in
         polynomial time, but can take longer (possibly exponentially longer)
@@ -339,21 +337,20 @@
         cracked just as quickly as the relatively easier \(P\) problems?
       </p>
       <p>
-        How is the field of quantum computation relevant to this debate? Quantum
-        computing doesn't give us a straightforward answer, but it does shake
-        things up. While classical computers might struggle with \(NP\)
-        problems, quantum computers could potentially zip through them (thanks
-        to their unique abilities of superposition and entanglement!).
+        Quantum computing doesn't give us a straightforward answer to this
+        question, but it does shake things up. While classical computers might
+        struggle with \(NP\) problems, quantum computers could potentially zip
+        through them (thanks to their unique abilities of superposition and
+        entanglement!).
       </p>
       <p>
-        This raises the intriguing possibility that \(NP\) problems might be
-        solvable in polynomial time on quantum computers, blurring the line
-        between \(P\) and \(NP\). The implications of this would be profound, as
-        it could revolutionize industries reliant on computational efficiency
-        (such as transportation and resource allocation), but it could also have
-        adverse effects on existing industries reliant on the difficulty of
-        solving certain problems, such as blockchain technologies and
-        cryptography.
+        This raises the intriguing possibility of \(NP\) problems being
+        polynomial-time solvable on quantum computers, blurring the line between
+        \(P\) and \(NP\). The implications of this would be profound, as it
+        could revolutionize industries reliant on computational efficiency (such
+        as transportation and resource allocation), but could also have adverse
+        effects on existing industries reliant on the difficulty of solving
+        certain problems, such as blockchain technologies and cryptography.
       </p>
       <h2>Conclusion: Embracing the Quantum Future</h2>
       <p>
@@ -367,9 +364,8 @@
         However, with every step, we can get closer to finally unlocking the
         full potential of quantum computing. This journey may lead us down
         unexpected paths, revealing new complexities and challenging our
-        understanding. But that's the thrill of exploration! We embrace the
-        unknown, adapt, and grow. Let's dive deeper, push boundaries, and
-        continue our quest. Who knows what incredible discoveries await?🚀
+        understanding. But that's the thrill of exploration! Let's dive deeper
+        and push boundaries; who knows what incredible discoveries await?🚀
       </p>
 
       <h2>References</h2>
