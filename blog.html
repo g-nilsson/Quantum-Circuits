@@ -25,6 +25,12 @@
     height: 750px;
     max-height: 100%; /* Adjust iframe height as needed */
   }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 </style>
 </head>
 <body>
@@ -48,7 +54,7 @@
   when we can employ them for different algorithms. In that case, we have some input on the left-hand side and a probability associated with each possible outcome. 
     Yes, this means that a probabilistic algorithm isn't guaranteed to give the right answer. That might feel weird, but actually, most generative AI that we're used to today
   are probabilistic, the model assigns a certain probability to each next word in the response!<br></p>
-  <img src='Assets/prob_hadamard.gif' width=350px>
+  <img src='Assets/prob_hadamard.gif' width=350px class="center">
   <p>
     In the gif above, we see a setup that takes in two inputs and throws out two outputs. We could call it a gate, much like how logic gates take in inputs on a circuit.
     As you might see, this specific gate gives out 50% to the top and 50% to the bottom, no matter what the input is. This specific gate actually has a name: the Hadamard Gate!
@@ -60,7 +66,8 @@
   <p>After a little thinking, it feels natural that the output of the second Hadamard gate will also be 50/50, after all, every Hadamard gate outputs 50/50, regardless of input. 
     We could also come to the same conclusion by following the possible paths, and adding up the probabilities of each path</p>
 
-  <img src='Assets/two_hadamard_prob.png' width=350px>
+  <img src='Assets/two_hadamard_prob.png' width=600px class="center">
+  
 
   <p>The picture above shows that if you start at the top input, you have a 50% chance to end up at the top output, which makes sense!<br>
   Now, we're ready to see how all of this will work when we use quantum circuits instead, things are about to get weird.</p>
