@@ -95,8 +95,19 @@
     If I plug in a qubit that is 100% at 0, what kind of qubit will I get at the very end?
     <br>
     <br>
-    <img src='Assets/hadamard_gates_series.png' width=1000px class="center">
     <br>
+  </p>
+  <img src='Assets/hadamard_gates_series.png' width=1000px class="center">
+  <p>
+    Now here is when things get funky. We can get the overall probability amplitude of a single path by 
+    multiplying all the weights of the edges, and then performing our operation |x|^2.<br>
+    If we look at the top path, we have i/2 * i/2 = -1/4, which, if we plug into our operation we get |-1/4|^2=1/16. 
+    There's a 1/16 probability amplitude associated with that specific path.<br>
+    If we look at the path that goes from 0, then down in the middle, and then up to 0 again, we have 1/2 * 1/2 = 1/4, which, if we plug into our operation we get |1/4|^2=1/16. 
+    There's a 1/16 probability amplitude associated with that specific path as well.<br>
+    So overall, there are two different valid paths that take us from 0 as an input to 0 as an output. Our probabilistic logic would tell us 
+    to add these together, to get 1/16 + 1/16. But, here in quantum, everything stays as qubits until we actually observe it (which is our |x|^2 operation). 
+    We need to find each paths probability amplitude, and add those together. 
   </p>
   
   <div class="iframe-container">
