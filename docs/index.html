@@ -167,8 +167,9 @@
         edge weights may be complex numbers. Okay, now what does that mean?<br />
       </p>
       <p>
-        Let's remake the Hadamard Gate but in the quantum world 
-        (<i>Notice the complex weights of the top and bottom edges</i>).
+        Let's remake the Hadamard Gate but in the quantum world (<i
+          >Notice the complex weights of the top and bottom edges</i
+        >).
       </p>
       <img src="Assets/quantum_hadamard.gif" width="800px" class="center" />
       <p>
@@ -185,11 +186,11 @@
         outcome if we started at the top input!<br />
       </p>
       <p>
-        Also, notice that we've labeled the top input with a \(0\) and the bottom
-        one with a \(1\), we can now treat them as bits of input where we either
-        input a \(1\) or a \(0\). In the probabilistic world, we start at a
-        single point, with the entire probability mass, letting it spread out to
-        the different possible outcomes. <br />
+        Also, notice that we've labeled the top input with a \(0\) and the
+        bottom one with a \(1\), we can now treat them as bits of input where we
+        either input a \(1\) or a \(0\). In the probabilistic world, we start at
+        a single point, with the entire probability mass, letting it spread out
+        to the different possible outcomes. <br />
       </p>
       <p>
         In the quantum world, we input a qubit and get out a qubit! In the gif
@@ -205,9 +206,10 @@
       <p>
         Now let's think, if I connect two of these quantum Hadamard gates in
         series such that the probability amplitudes (the values before we do
-        \(|x|^2\)) of \(0\) and \(1\), get inputted into the
-        second Hadamard gate. If I plug in a \(0\) (a qubit that is \(100\%\) at \(0\)),
-        what's the probability that I will end up at \(0\) again? (technically, the final qubit's probability for \(0\))
+        \(|x|^2\)) of \(0\) and \(1\), get inputted into the second Hadamard
+        gate. If I plug in a \(0\) (a qubit that is \(100\%\) at \(0\)), what's
+        the probability that I will end up at \(0\) again? (technically, the
+        final qubit's probability for \(0\))
       </p>
       <img
         src="Assets/hadamard_gates_series.png"
@@ -248,12 +250,15 @@
       </p>
       <p>
         This is <b>quantum interference</b>, just like how waves can interfere
-        with each other and cancel out, so can our probability amplitudes. 
-        This is the core feature that differentiates quantum circuits from probabilistic ones.<br />
+        with each other and cancel out, so can our probability amplitudes. This
+        is the core feature that differentiates quantum circuits from
+        probabilistic ones.<br />
       </p>
       <p>
         You can try this out in this quantum circuit simulation from
-        <a href="https://thequantumlaend.de/">https://thequantumlaend.de/</a>
+        <a href="https://thequantumlaend.de/" target="_blank"
+          >https://thequantumlaend.de/</a
+        >
         built by the University of Stuttgart.
         <br />
         Remove all but \(1\) of the qubits, then set the system up like the
@@ -272,28 +277,26 @@
       <h2>Benefits (over classical models)</h2>
       <p>
         The question now is, what benefits do these quantum circuit models
-        provide? Why is there so much hype for the use and achievability of
-        quantum circuit models? What’s wrong with our classical models of
-        computation?
+        provide? Why not just use our classical models of computation?
       </p>
       <p>
         In terms of computability, there is actually no difference between the
-        functionality of quantum computation models and those of classical
-        models, as any problems that can be solved with quantum models can also
-        be solved with classical computation models <b>given enough time</b>.
+        two computational models, as any problems that can be solved with
+        quantum models can also be solved with classical computation models
+        <b>given enough time</b>.
       </p>
       <p>
         The key phrase, however, is “given enough time.” Many computational
-        problems that exist in the world today, even though they are
-        theoretically solvable by our classical models of computation, are
-        practically impossible to solve, because they require so much time to
-        complete that they do not make sense to even attempt!
+        problems that exist today, even though theoretically solvable by our
+        classical models of computation, are practically impossible to solve,
+        because they require so much time to complete that they do not make
+        sense to even attempt!
       </p>
       <p>
-        This is where quantum circuit models can come into play. These models
-        have the potential to solve such complicated problems with exponentially
-        fewer computational steps than the best-known non-quantum algorithms!
-        This capability, known as
+        This is where quantum circuit models can come into play. They have the
+        potential to solve such complicated problems with exponentially fewer
+        computational steps than the best-known non-quantum algorithms! This
+        capability, known as
         <b>quantum supremacy</b>, is a result of the principles of quantum
         superposition and entanglement, which would, in theory, allow quantum
         computers to explore multiple computational paths simultaneously, a
@@ -303,9 +306,9 @@
 
       <h2>Examples</h2>
       <p>
-        While the concept of quantum supremacy is still under question, there
-        has been some progress in quantum algorithms that provide some
-        significant time benefits over classical models. One common algorithm is
+        There has been some preliminary progress in quantum algorithms that
+        provide some significant time benefits over classical models. One common
+        algorithm is
         <b>Shor’s algorithm</b>. The best-known classical algorithm for integer
         factorization requires super-polynomial time. However, with the quantum
         benefits of Shor’s algorithm, this can be completed in polynomial time,
@@ -318,8 +321,8 @@
         algorithm requires just \(O(\sqrt{N})\) time, providing a quadratic
         speedup for the problem, especially for larger database sizes.
         <br />
-        An example implementation of the algorithm is shown below, using just
-        two qubits to search through four possible states in .
+        An example circuit implementing the algorithm is shown below, using just
+        two qubits to search through four possible states .
       </p>
       <img src="Assets/grover.png" width="800px" class="center" />
       <p>
@@ -372,26 +375,32 @@
       <h2>References</h2>
       <p>
         Cunningham, J. (2020). A Talk on Quantum Finite Automata. YouTube.
-        <a href="https://www.youtube.com/watch?v=PFsMHcQyJ5g"
+        <a href="https://www.youtube.com/watch?v=PFsMHcQyJ5g" target="_blank"
           >https://www.youtube.com/watch?v=PFsMHcQyJ5g</a
         >
       </p>
       <p>
         O'Donnell, R. (2015). Lecture 1: Introduction to the Quantum Circuit
         Model. CMU School of Computer Science.
-        <a href="https://www.cs.cmu.edu/~odonnell/quantum15/lecture01.pdf"
+        <a
+          href="https://www.cs.cmu.edu/~odonnell/quantum15/lecture01.pdf"
+          target="_blank"
           >https://www.cs.cmu.edu/~odonnell/quantum15/lecture01.pdf</a
         >
       </p>
       <p>
         THE QUANTUM LÄND. (2024). Quantum Circuit Simulator. THE QUANTUM LÄND.
-        <a href="https://thequantumlaend.de/quantum-circuit-designer/"
+        <a
+          href="https://thequantumlaend.de/quantum-circuit-designer/"
+          target="_blank"
           >https://thequantumlaend.de/quantum-circuit-designer/</a
         >
       </p>
       <p>
         Romanello, R. (2021). Quantum Finite Automata. University of Udine.
-        <a href="https://riccardoromanello.github.io/downloads/mthesis.pdf"
+        <a
+          href="https://riccardoromanello.github.io/downloads/mthesis.pdf"
+          target="_blank"
           >https://riccardoromanello.github.io/downloads/mthesis.pdf</a
         >
       </p>
