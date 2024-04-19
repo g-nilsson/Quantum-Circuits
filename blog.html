@@ -191,8 +191,8 @@
         In the quantum world, we input a qubit and get out a qubit! In the gif
         above, it looks like we have two different inputs and two different
         outputs, but really we're inputting a single qubit (that happens to have
-        a \(100\%\) probability to collapse to a \(0\) if we were to observe it),
-        and outputting a single qubit (that now has a \(50\%\) chance to
+        a \(100\%\) probability to collapse to a \(0\) if we were to observe
+        it), and outputting a single qubit (that now has a \(50\%\) chance to
         collapse to a \(0\), and a \(50\%\) chance to collapse to a \(1\), if we
         observe it). We've put our single qubit into a
         <b>superposition</b>!<br />
@@ -218,22 +218,19 @@
       </p>
       <p>
         If we look at the top path, we have \(i/2 \times i/2 = -1/4\), which, if
-        we plug into our operation we get \(|-1/4|^2=1/16\). There's a \(1/16\)
-        probability amplitude associated with that specific path.<br />
+        we plug into our operation we get \(|-1/4|^2=1/16\).<br />
       </p>
       <p>
         If we look at the path that goes from 0, then down in the middle, and
-        then up to \(0\) again, we have \(1/2 \times 1/2\) = \(1/4\), which, if we
-        plug into our operation we get \(|1/4|^2=1/16\). There's a \(1/16\)
-        probability amplitude associated with that specific path as well.<br />
+        then up to \(0\) again, we have \(1/2 \times 1/2\) = \(1/4\), which, if
+        we plug into our operation we get \(|1/4|^2=1/16\). There's a \(1/16\)
+        probability amplitude associated with each path individually.<br />
       </p>
       <p>
-        So overall, there are two different valid paths that take us from \(0\) as
-        an input to \(0\) as an output. Our probabilistic logic would tell us to add
-        these together, to get \(1/16 + 1/16\). But, here in quantum, everything
-        stays as qubits until we actually observe it (which is our \(|x|^2\)
-        operation). We need to find each path's probability amplitude and add
-        those together.
+        So overall, there are two different valid paths with non-zero
+        probabilities. But if we want to calculate the total unnormalized
+        probability of going from \(0\) to \(0\) we need to sum the paths'
+        probability amplitudes first and then do \(|x|^2\).
       </p>
       <img
         src="Assets/quantum_interference.png"
@@ -254,8 +251,8 @@
         <a href="https://thequantumlaend.de/">https://thequantumlaend.de/</a>
         built by the University of Stuttgart.
         <br />
-        Remove all but \(1\) of the qubits, then set the system up like the pictures
-        below and observe how the histogram on the bottom changes.
+        Remove all but \(1\) of the qubits, then set the system up like the
+        pictures below and observe how the histogram on the bottom changes.
       </p>
       <div
         style="
